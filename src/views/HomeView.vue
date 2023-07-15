@@ -22,6 +22,7 @@
       Já seus atributos variam de forma diferente, como é possível observar:</p>
     <div class="text-center">
       <!-- Gráfico - Variação dos atributos -->
+      
       <h3>grafico aqui</h3>
     </div>
     <div class="text-center dropdown">

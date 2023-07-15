@@ -13,10 +13,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" aria-current="page" href="#">Introdução</a>
-          <a class="nav-link" href="#">Análise Modelos</a>
-          <a class="nav-link" href="#">Prevenção</a>
-          <a class="nav-link" href="#">Ideia de negócio</a>
+          <router-link to="/" class="nav-link text-decoration-none">
+            <a>Introdução</a>
+          </router-link>
+          <router-link to="/analise" class="nav-link text-decoration-none">
+            <a>Análise Modelos</a>
+          </router-link>
+          <router-link to="/prevencao" class="nav-link text-decoration-none">
+            <a>Prevenção</a>
+          </router-link>
+          <router-link to="/ideia" class="nav-link text-decoration-none">
+            <a>Ideia de negócio</a>
+          </router-link>
         </div>
       </div>
     </div>

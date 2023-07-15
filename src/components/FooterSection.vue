@@ -19,6 +19,16 @@
 </template>
 
 <style>
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.site-content {
+  flex: 1 0 auto;
+}
+
 .footer-section {
   background-color: #343a40;
   color: #ffffff;
@@ -26,13 +36,23 @@
   width: 100%;
 }
 
-.footer-section ul {
-  list-style: none;
-  padding: 0;
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.footer-section ul li {
-  margin-bottom: 10px;
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.align-items-center {
+  align-items: center !important;
 }
 
 .button-container {
