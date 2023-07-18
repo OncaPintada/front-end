@@ -1,4 +1,5 @@
 <template>
+  <div>
   <nav class="navbar bg-body-tertiary" style="background-color: #F0F0F0">
     <div class="container">
       <a class="navbar-brand" href="#">
@@ -29,6 +30,7 @@
       </div>
     </div>
   </nav>
+</div>
 </template>
 
 <script>

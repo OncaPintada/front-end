@@ -10,6 +10,7 @@
 import NavBar from "@/components/Nav-Bar.vue";
 import FooterSection from "@/components/FooterSection.vue";
 
+
 export default {
   name: "App",
   components: {
@@ -20,7 +21,6 @@ export default {
 </script>
 
 <style>
-
 #app {
   min-height: 100vh;
   background-color: #D9D9D9;

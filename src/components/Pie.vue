@@ -42,11 +42,11 @@ export default {
     },
     width: {
       type: Number,
-      default: 300
+      default: 400
     },
     height: {
       type: Number,
-      default: 300
+      default: 400
     },
     cssClasses: {
       default: '',
@@ -64,11 +64,11 @@ export default {
   data() {
     return {
       chartData: {
-        labels: [ 'Não Fraudes','Fraudes'],
+        labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
         datasets: [
           {
-            backgroundColor: ['#41B883', '#E46651'],
-            data: [284315, 492]
+            backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
+            data: [40, 20, 80, 10]
           }
         ]
       },

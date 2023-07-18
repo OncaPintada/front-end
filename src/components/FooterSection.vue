@@ -30,7 +30,7 @@ html, body {
 }
 
 .footer-section {
-  background-color: #343a40;
+  background-color: #00AE30;
   color: #ffffff;
   padding: 20px 0;
   width: 100%;

@@ -16,14 +16,14 @@
 
     <table class="table table-striped">
       <!-- Tabela de dados -->
-
+      
     </table>
     <p class="text-center">Como podemos observar, o dataset é muito desbalanceado, possuindo pouquíssimos casos de fraude.
       Já seus atributos variam de forma diferente, como é possível observar:</p>
     <div class="text-center">
       <!-- Gráfico - Variação dos atributos -->
-      
       <h3>grafico aqui</h3>
+
     </div>
     <div class="text-center dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
