@@ -40,11 +40,64 @@ export default {}
 </script>
 
 <style>
-.custom-bg {
-  background-color: #00AE30;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.view {
+  font-family: 'Raleway', sans-serif;
 }
 
 .custom-bg .nav-link {
   color: white;
+}
+
+.logo {
+  width: 7.36%;
+  margin-left: 1.52%;
+}
+
+.subNavOnca {
+  width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbarOnca {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.nameGroup{
+  color: #000;
+  font-family: Raleway, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: bold;
+  margin-left: 2.63%;
+}
+.nav {
+  width: 100%;
+  background-color: #00AE30;
+}
+.navbar {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar a {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
 }
 </style>

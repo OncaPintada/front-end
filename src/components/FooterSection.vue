@@ -11,7 +11,7 @@
         </ul>
       </div>
       <div class="button-container d-flex flex-column">
-        <a href="/documento.pdf" class="btn btn-light">Material Usado</a>
+        <a href="https://colab.research.google.com/drive/1G5NoHiNiGNh2n7u1FRblSz8YKFTTSqYm?usp=sharing" class="btn btn-light" target="_blank">Material Usado</a>
         <a href="#" class="btn btn-secondary mt-2">Fale Conosco</a>
       </div>
     </div>
