@@ -1,61 +1,71 @@
 <template>
-    <div class="view">
-      <h1 class="text-center mt-5 mb-3">Análise Modelos</h1>
-      <p class="text-center">Agora que já sabemos a forma da nossa base de dados, vamos analisá-la a partir do treinamento de modelos de machine learning. Aqui focaremos em modelos de aprendizado supervisionado, já que possuímos as anotações de cada objeto.</p>
-      <div class="text-center">
-        <!-- Gráfico - Proporção de casos de fraude -->
-  
-        <h3>grafico aqui</h3>
+    <div class="view  container container-fluid ">
+      <h1 class="mt-5 mb-3 title text-center">Análise dos Modelos de Machine Learning</h1>
+      <div class="mb-4">
+      <p>
+        Agora que já sabemos a forma da nossa base de dados, vamos analisá-la a partir do treinamento de modelos de machine learning. Aqui focaremos em modelos de aprendizado supervisionado, já que possuímos as anotações de cada objeto.
+      </p>
+      <p>
+        Foi decidido que essa análise seria feita com 4 partições de treino diferentes:
+      </p>
+      <ul>
+        <li>Sem oversampling e undersampling</li>
+        <li>Com undersampling, utilizando o algoritmo RandomUnderSampler</li>
+        <li>Com oversampling, utilizando o algoritmo SMOTE</li>
+        <li>Com oversampling, utilizando o algoritmo RandomOverSampler</li>
+      </ul>
+      <p>
+        OBS: Nas partições de validação e teste não foram utilizadas esses algoritmos. Além disso, as partições mantiveram as proporções de casos de fraude/não fraude do dataset original.
+      </p>
+      <p>
+        Os modelos utilizados foram: Árvore de decisão, MLP, XBoosting, SHAP, Random Forest e o KNeighbors. Em todos os casos nós fizemos o cross-validation para assegurar que as métricas estavam corretas.
+      </p>
+      <p>
+        A primeira coisa a ser observada é que o undersampling não é uma maneira eficiente de pre-processar os dados desbalanceados para treinamento. Em todos os modelos ele foi o que pior performou, classificando erroneamente muitos casos de não fraude como fraude.
+      </p>
+      <h3>grafico aqui</h3>
+      <p>
+        Indo na contramão desse caso, as partições sem undersampling e oversampling e as com oversampling (RandomOverSampler) obtiveram os melhores resultados. Já as partições com oversampling (SMOTE) ficaram no meio do caminho, sendo melhores que as com undersampling mas piores que as outras duas partições.
+      </p>
+      <p>
+        O modelo que obteve a melhor performance foi o Random Forest e se aproximou de resultados obtidos na literatura científica. Ele não errou nenhum dos casos que classificou como fraude (da partição de validação) e obteve as melhores métricas de avaliação:
+      </p>
+      <h3>grafico aqui</h3>
+    </div>
+      <div class="chart-container mt-3 mb-3">
+        <!-- Gráfico - Métricas do Random Forest -->
+        <h3>gráfico aqui</h3>
       </div>
-  
-      <table class="table table-striped">
-        <!-- Tabela de dados -->
-        
-      </table>
-      <p class="text-center">Como podemos observar, o dataset é muito desbalanceado, possuindo pouquíssimos casos de fraude.
-        Já seus atributos variam de forma diferente, como é possível observar:</p>
-      <div class="text-center">
-        <!-- Gráfico - Variação dos atributos -->
-        <h3>grafico aqui</h3>
-  
+      <p>
+        Decidimos nos aprofundar no Random Forest e analisar os casos que ele classificou errado. Com as nossas análises, chegamos a conclusão que os objetos mal classificados tinham valores de atributos mais distribuídos. Apesar disso, os dois grupos eram parecidos, o que pode indicar que com mais exemplos poderia-se obter um classificador melhor.
+      </p>
+      <p>
+        Além disso, implementamos o modelo novamente, agora selecionando os atributos mais importantes do modelo anterior. Esse gráfico mostra a importância de cada um dos atributos:
+      </p>
+      <div class="chart-container mt-3 mb-3">
+        <!-- Gráfico - Importância dos atributos -->
+        <h3>gráfico aqui</h3>
       </div>
-      <div class="text-center dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Escolher Atributo
-        </button>
-  
-        <ul class="dropdown-menu">
-          <!-- Opções de atributos -->
-          <li><a class="dropdown-item" href="#">atributo1</a></li>
-          <li><a class="dropdown-item" href="#">atributo2</a></li>
-          <li><a class="dropdown-item" href="#">atributo3</a></li>
-        </ul>
+      <p>
+        Fizemos 3 tipos de seleção:
+      </p>
+      <ul>
+        <li>Uma utilizando o TruncatedSVD</li>
+        <li>Uma utilizando o PCA</li>
+        <li>E uma excluindo os atributos menos importantes</li>
+      </ul>
+      <p>
+        Nos dois primeiros casos, os algoritmos utilizados reduziram os atributos com menos de 2% de importância para quatro atributos, resultando numa base de dados com quinze atributos. Já no último caso, tais colunas foram descartadas, resultando numa base de dados com onze atributos.
+      </p>
+      <p>
+        A redução de atributos obteve resultados muito semelhantes com os anteriores:
+      </p>
+      <div class="chart-container mt-3 mb-3">
+        <!-- Gráfico - Resultados da redução de atributos -->
+        <h3>gráfico aqui</h3>
       </div>
-      <p class="text-center">Percebemos que a maior parte deles se concentra em um intervalo pequeno de valores, ou seja,
-        possuem um grau alto de compactação. É possível analisar a correlação dos atributos com sua classificação,
-        estabelecendo que 1 (ou -1) é a correlação máxima (proporcionais) e 0 é a mínima (sem correlação):</p>
-      <div class="text-center">
-        <!-- Gráfico - Correlação dos atributos -->
-        <h3>grafico aqui</h3>
-      </div>
-      <p class="text-center">Percebemos que há uma correlação negativa da classe com as colunas v1, v3, v5, v6, v7, v10,
-        v12, v14, v16, v17 e v18 e uma correlação positiva com os atributos v2, v4 e v11. Agora vamos visualizar como são os
-        valores dos atributos de transações fraudulentas e não fraudulentas:</p>
-      <div class="text-center">
-        <!-- Gráfico - Valores dos atributos -->
-        <h3>grafico aqui</h3>
-      </div>
-      <p class="text-center">Através do gráfico, vemos que os atributos que mais se diferem entre as classes (fraude ou não
-        fraude) são esses: v3, v7, v9, v10, v11, v12, v14, v16, v17, v18.</p>
+      <p>
+        Portanto, concluímos que a redução de atributos não afetou significativamente a performance do modelo, mantendo resultados similares aos obtidos anteriormente. Além disso, a seleção de atributos permite uma simplificação dos dados e redução da dimensionalidade, o que pode ser benéfico em termos de tempo de processamento e espaço de armazenamento.
+      </p>
     </div>
   </template>
-  
-  <style>
-  .view {
-    margin: 0 auto;
-    width: 90%;
-  }
-  </style>
-  
-  
-  
