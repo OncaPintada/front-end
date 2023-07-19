@@ -46,10 +46,8 @@
       pouquíssimos casos de fraude. Já seus atributos variam de forma diferente,
       como é possível observar:
     </p>
-    <div class="mb-4">
-      <!-- Gráfico - Variação dos atributos -->
-
-      <h3>grafico aqui</h3>
+    <div class="mb-4 barPar">
+      <BarGraph nameAttr="time" />
     </div>
     <div class="dropdown mb-4  d-flex justify-content-center">
       <button class="btn btn-success dropdown-toggle " type="button" data-bs-toggle="dropdown"
@@ -57,11 +55,39 @@
         Escolher Atributo
       </button>
 
-      <ul class="dropdown-menu text-center">
+      <ul class="dropdown-menu text-center scroll">
         <!-- Opções de atributos -->
-        <li class="dropdown-item">atributo1</li>
-        <li class="dropdown-item">atributo2</li>
-        <li class="dropdown-item">atributo3</li>
+        <li class="dropdown-item" v-on:click="onClick('time')" >time</li>
+        <li class="dropdown-item">v1</li>
+        <li class="dropdown-item">v2</li>
+        <li class="dropdown-item">v3</li>
+        <li class="dropdown-item">v4</li>
+        <li class="dropdown-item">v1</li>
+        <li class="dropdown-item">v5</li>
+        <li class="dropdown-item">v6</li>
+        <li class="dropdown-item">v7</li>
+        <li class="dropdown-item">v8</li>
+        <li class="dropdown-item">v9</li>
+        <li class="dropdown-item">v10</li>
+        <li class="dropdown-item">v11</li>
+        <li class="dropdown-item">v12</li>
+        <li class="dropdown-item">v13</li>
+        <li class="dropdown-item">v14</li>
+        <li class="dropdown-item">v15</li>
+        <li class="dropdown-item">v16</li>
+        <li class="dropdown-item">v17</li>
+        <li class="dropdown-item">v18</li>
+        <li class="dropdown-item">v19</li>
+        <li class="dropdown-item">v20</li>
+        <li class="dropdown-item">v21</li>
+        <li class="dropdown-item">v22</li>
+        <li class="dropdown-item">v23</li>
+        <li class="dropdown-item">v24</li>
+        <li class="dropdown-item">v25</li>
+        <li class="dropdown-item">v26</li>
+        <li class="dropdown-item">v27</li>
+        <li class="dropdown-item">v28</li>
+        <li class="dropdown-item">amount</li>
       </ul>
     </div>
     <p class="mb-4">
@@ -107,6 +133,11 @@
   font-weight: 500;
 }
 
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
 .view a:hover {
   color: #00ae30;
 }
@@ -126,7 +157,14 @@
 </style>
 <script>
 import PieGraph from "@/components/PieGraph.vue";
+import BarGraph from "@/components/BarGraph.vue"
 export default {
-  components: { PieGraph },
+  components: { PieGraph, BarGraph },
+  methods: {
+    onClick(str) {
+      console.log(str)
+    }
+  }
 };
+
 </script>
