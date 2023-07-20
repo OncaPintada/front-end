@@ -40,7 +40,7 @@ export default {
             ],
             datasets: [
               {
-                label: "v1",
+                label: "time",
                 backgroundColor: "#f87979",
                 data: [12340, 35057, 46846, 50541, 11595, 35837, 49585, 43006],
               },
@@ -139,7 +139,7 @@ export default {
             labels: [-66.79, -54.95, -43.1, -31.25, -19.41, -7.56, 4.29, 16.13],
             datasets: [
               {
-                label: "v1",
+                label: "v2",
                 backgroundColor: "#f87979",
                 data: [2, 2, 15, 52, 292, 19878, 264497, 69],
               },
@@ -190,7 +190,7 @@ export default {
             ],
             datasets: [
               {
-                label: "v1",
+                label: "v3",
                 backgroundColor: "#f87979",
                 data: [1, 0, 19, 41, 118, 1377, 271770, 11481],
               },
@@ -239,7 +239,7 @@ export default {
             labels: [-4.27, -1.45, 1.37, 4.19, 7.01, 9.83, 12.65, 15.47],
             datasets: [
               {
-                label: "v1",
+                label: "v4",
                 backgroundColor: "#f87979",
                 data: [4606, 135843, 132514, 11389, 344, 84, 23, 4],
               },
@@ -290,7 +290,7 @@ export default {
             ],
             datasets: [
               {
-                label: "v1",
+                label: "v5",
                 backgroundColor: "#f87979",
                 data: [1, 0, 0, 2, 23, 5275, 279464, 42],
               },
@@ -339,7 +339,7 @@ export default {
             labels: [-19.94, -7.51, 4.92, 17.35, 29.79, 42.22, 54.65, 67.09],
             datasets: [
               {
-                label: "v1",
+                label: "v6",
                 backgroundColor: "#f87979",
                 data: [18, 19550, 265195, 42, 1, 0, 0, 1],
               },
@@ -388,7 +388,7 @@ export default {
             labels: [-33.3, -12.78, 7.74, 28.26, 48.78, 69.29, 89.81, 110.33],
             datasets: [
               {
-                label: "v1",
+                label: "v7",
                 backgroundColor: "#f87979",
                 data: [19, 3837, 280908, 41, 1, 0, 0, 1],
               },
@@ -439,7 +439,7 @@ export default {
             ],
             datasets: [
               {
-                label: "v1",
+                label: "v8",
                 backgroundColor: "#f87979",
                 data: [1, 3, 6, 18, 176, 3321, 281191, 91],
               },
@@ -488,7 +488,7 @@ export default {
             labels: [-11.62, -7.99, -4.36, -0.73, 2.89, 6.52, 10.15, 13.78],
             datasets: [
               {
-                label: "v1",
+                label: "v9",
                 backgroundColor: "#f87979",
                 data: [4, 45, 2054, 243364, 38582, 737, 20, 1],
               },
@@ -537,7 +537,7 @@ export default {
             labels: [-21.57, -15.53, -9.48, -3.44, 2.6, 8.64, 14.68, 20.72],
             datasets: [
               {
-                label: "v1",
+                label: "v10",
                 backgroundColor: "#f87979",
                 data: [10, 57, 139, 85872, 197607, 1058, 63, 1],
               },
@@ -586,7 +586,7 @@ export default {
             labels: [-3.75, -1.64, 0.46, 2.56, 4.66, 6.76, 8.87, 10.97],
             datasets: [
               {
-                label: "v1",
+                label: "v11",
                 backgroundColor: "#f87979",
                 data: [334, 86840, 178984, 18318, 201, 75, 40, 15],
               },
@@ -635,7 +635,7 @@ export default {
             labels: [-17.03, -13.71, -10.39, -7.08, -3.76, -0.44, 2.87, 6.19],
             datasets: [
               {
-                label: "v1",
+                label: "v12",
                 backgroundColor: "#f87979",
                 data: [30, 56, 58, 155, 12132, 256761, 15612, 3],
               },
@@ -684,7 +684,7 @@ export default {
             labels: [-4.98, -3.37, -1.75, -0.14, 1.47, 3.09, 4.7, 6.32],
             datasets: [
               {
-                label: "v1",
+                label: "v13",
                 backgroundColor: "#f87979",
                 data: [1, 1343, 46743, 165987, 66427, 4295, 10, 1],
               },
@@ -733,7 +733,7 @@ export default {
             labels: [-17.36, -13.64, -9.92, -6.2, -2.48, 1.23, 4.95, 8.67],
             datasets: [
               {
-                label: "v1",
+                label: "v14",
                 backgroundColor: "#f87979",
                 data: [11, 68, 144, 496, 51087, 232403, 582, 16],
               },
@@ -782,7 +782,7 @@ export default {
             labels: [-3.66, -1.99, -0.32, 1.35, 3.03, 4.7, 6.37, 8.04],
             datasets: [
               {
-                label: "v1",
+                label: "v15",
                 backgroundColor: "#f87979",
                 data: [865, 28530, 170357, 83824, 1207, 18, 5, 1],
               },
@@ -831,7 +831,7 @@ export default {
             labels: [-12.16, -8.23, -4.3, -0.37, 3.56, 7.49, 11.42, 15.35],
             datasets: [
               {
-                label: "v1",
+                label: "v16",
                 backgroundColor: "#f87979",
                 data: [50, 111, 2975, 274500, 7161, 9, 0, 1],
               },
@@ -880,7 +880,7 @@ export default {
             labels: [-23.01, -18.71, -14.41, -10.11, -5.8, -1.5, 2.8, 7.1],
             datasets: [
               {
-                label: "v1",
+                label: "v17",
                 backgroundColor: "#f87979",
                 data: [19, 36, 84, 83, 164, 239121, 45166, 134],
               },
@@ -929,7 +929,7 @@ export default {
             labels: [-8.59, -6.77, -4.96, -3.14, -1.32, 0.5, 2.31, 4.13],
             datasets: [
               {
-                label: "v1",
+                label: "v18",
                 backgroundColor: "#f87979",
                 data: [26, 31, 118, 2153, 79799, 188763, 13863, 54],
               },
@@ -978,7 +978,7 @@ export default {
             labels: [-6.41, -4.81, -3.21, -1.61, -0.01, 1.59, 3.19, 4.79],
             datasets: [
               {
-                label: "v1",
+                label: "v19",
                 backgroundColor: "#f87979",
                 data: [2, 24, 1250, 37435, 206743, 36970, 2334, 49],
               },
@@ -1029,7 +1029,7 @@ export default {
             ],
             datasets: [
               {
-                label: "v1",
+                label: "v20",
                 backgroundColor: "#f87979",
                 data: [1, 0, 18, 186, 283919, 669, 12, 2],
               },
@@ -1078,7 +1078,7 @@ export default {
             labels: [-30.95, -23.2, -15.45, -7.69, 0.06, 7.82, 15.57, 23.33],
             datasets: [
               {
-                label: "v1",
+                label: "v21",
                 backgroundColor: "#f87979",
                 data: [1, 7, 33, 563, 283252, 858, 79, 14],
               },
@@ -1127,7 +1127,7 @@ export default {
             labels: [-9.59, -6.91, -4.23, -1.55, 1.12, 3.8, 6.48, 9.16],
             datasets: [
               {
-                label: "v1",
+                label: "v22",
                 backgroundColor: "#f87979",
                 data: [14, 21, 329, 111804, 172429, 192, 14, 4],
               },
@@ -1176,7 +1176,7 @@ export default {
             labels: [-40.6, -32.18, -23.77, -15.35, -6.93, 1.49, 9.9, 18.32],
             datasets: [
               {
-                label: "v1",
+                label: "v23",
                 backgroundColor: "#f87979",
                 data: [2, 2, 13, 54, 760, 283776, 183, 17],
               },
@@ -1225,7 +1225,7 @@ export default {
             labels: [-2.37, -1.45, -0.52, 0.41, 1.34, 2.27, 3.19, 4.12],
             datasets: [
               {
-                label: "v1",
+                label: "v24",
                 backgroundColor: "#f87979",
                 data: [354, 22360, 89213, 158824, 13930, 9, 96, 21],
               },
@@ -1274,7 +1274,7 @@ export default {
             labels: [-9.18, -6.96, -4.73, -2.5, -0.27, 1.95, 4.18, 6.41],
             datasets: [
               {
-                label: "v1",
+                label: "v25",
                 backgroundColor: "#f87979",
                 data: [2, 6, 33, 3050, 271644, 10032, 31, 9],
               },
@@ -1323,7 +1323,7 @@ export default {
             labels: [-2.22, -1.46, -0.69, 0.07, 0.84, 1.6, 2.37, 3.13],
             datasets: [
               {
-                label: "v1",
+                label: "v26",
                 backgroundColor: "#f87979",
                 data: [5, 1988, 74107, 161432, 45221, 1564, 445, 45],
               },
@@ -1372,7 +1372,7 @@ export default {
             labels: [-19.18, -12.41, -5.64, 1.14, 7.91, 14.68, 21.45, 28.23],
             datasets: [
               {
-                label: "v1",
+                label: "v27",
                 backgroundColor: "#f87979",
                 data: [1, 6, 1006, 283729, 63, 1, 0, 1],
               },
@@ -1421,7 +1421,7 @@ export default {
             labels: [-12.35, -6.19, -0.03, 6.13, 12.29, 18.45, 24.61, 30.77],
             datasets: [
               {
-                label: "v1",
+                label: "v28",
                 backgroundColor: "#f87979",
                 data: [3, 196, 284429, 149, 14, 14, 1, 1],
               },
