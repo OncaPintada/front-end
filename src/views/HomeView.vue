@@ -137,7 +137,7 @@
     </p>
     <div class="mb-4">
       <!-- Gráfico - Correlação dos atributos -->
-      <h3>grafico aqui</h3>
+      <BarGraphCor/>
     </div>
     <p class="mb-4">
       Percebemos que há uma correlação negativa da classe com as colunas v1, v3,
@@ -197,13 +197,13 @@
 <script lang="jsx">
 import PieGraph from "@/components/PieGraph.vue";
 import BarGraph from "@/components/BarGraph.vue";
+import BarGraphCor from "@/components/BarGraphCor.vue"
 
 export default {
-  components: { PieGraph, BarGraph },
+  components: { PieGraph, BarGraph, BarGraphCor },
   methods: {
     onClick(str) {
       this.attr = str;
-      console.log("SIM");
     },
   },
   data() {
