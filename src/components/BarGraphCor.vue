@@ -62,8 +62,9 @@ export default {
                 ],
                 datasets: [
                     {
+                        
                         label: "Correlação com classificação",
-                        backgroundColor: "#f87979",
+                        backgroundColor: "#00ae31a8",
                         data: [-0.01,
                         -0.1,
                             0.09,
@@ -119,7 +120,7 @@ export default {
                     },
                     title: {
                         display: true,
-                        text: "Distribuição atributos",
+                        text: "Correlação atributos",
                         font: {
                             size: 23,
                             family: "'Raleway', sans-serif",

@@ -5,7 +5,7 @@
       A
       <a
         href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud"
-        class="text-reset"
+        class="text-reset link-success link-underline-opacity-25 link-underline-opacity-100-hover"
         >base de dados</a
       >
       que iremos analisar contém transações de cartões de crédito feitas por
@@ -13,7 +13,7 @@
       transformação dos dados originais pelo algoritmo PCA
       <a
         href="https://medium.com/analytics-vidhya/pca-a-linear-transformation-f8aacd4eb007"
-        class="text-reset"
+        class="text-reset link-success link-underline-opacity-25 link-underline-opacity-100-hover"
         >(Principal component analysis)</a
       >. Ele possui 31 atributos sendo 3 identificáveis (time, amount e class) e
       28 não identificáveis. A proporção dos casos de fraude pode ser vista
@@ -147,9 +147,9 @@
     </p>
     <div class="mb-4">
       <!-- Gráfico - Valores dos atributos -->
-      <h3>grafico aqui</h3>
+      <LineGraphPar/>
     </div>
-    <p class="">
+    <p class="mb-4">
       Através do gráfico, vemos que os atributos que mais se diferem entre as
       classes (fraude ou não fraude) são esses: v3, v7, v9, v10, v11, v12, v14,
       v16, v17, v18.
@@ -177,8 +177,8 @@
   overflow-y: scroll;
 }
 
-.view a:hover {
-  color: #00ae30;
+p a:hover {
+  color: #00ae31a8;
 }
 
 .title {
@@ -193,14 +193,18 @@
   width: 60%;
   margin: auto;
 }
+.link-success {
+  color: #00ae31a8;
+}
 </style>
 <script lang="jsx">
 import PieGraph from "@/components/PieGraph.vue";
 import BarGraph from "@/components/BarGraph.vue";
 import BarGraphCor from "@/components/BarGraphCor.vue"
+import LineGraphPar from "@/components/LineGraphPar.vue";
 
 export default {
-  components: { PieGraph, BarGraph, BarGraphCor },
+  components: { PieGraph, BarGraph, BarGraphCor, LineGraphPar },
   methods: {
     onClick(str) {
       this.attr = str;

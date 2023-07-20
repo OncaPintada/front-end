@@ -41,7 +41,7 @@ export default {
             datasets: [
               {
                 label: "time",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [12340, 35057, 46846, 50541, 11595, 35837, 49585, 43006],
               },
             ],
@@ -91,7 +91,7 @@ export default {
             datasets: [
               {
                 label: "v1",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [1, 2, 14, 36, 114, 397, 4824, 279419],
               },
             ],
@@ -140,7 +140,7 @@ export default {
             datasets: [
               {
                 label: "v2",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [2, 2, 15, 52, 292, 19878, 264497, 69],
               },
             ],
@@ -191,7 +191,7 @@ export default {
             datasets: [
               {
                 label: "v3",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [1, 0, 19, 41, 118, 1377, 271770, 11481],
               },
             ],
@@ -240,7 +240,7 @@ export default {
             datasets: [
               {
                 label: "v4",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [4606, 135843, 132514, 11389, 344, 84, 23, 4],
               },
             ],
@@ -291,7 +291,7 @@ export default {
             datasets: [
               {
                 label: "v5",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [1, 0, 0, 2, 23, 5275, 279464, 42],
               },
             ],
@@ -340,7 +340,7 @@ export default {
             datasets: [
               {
                 label: "v6",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [18, 19550, 265195, 42, 1, 0, 0, 1],
               },
             ],
@@ -389,7 +389,7 @@ export default {
             datasets: [
               {
                 label: "v7",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [19, 3837, 280908, 41, 1, 0, 0, 1],
               },
             ],
@@ -440,7 +440,7 @@ export default {
             datasets: [
               {
                 label: "v8",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [1, 3, 6, 18, 176, 3321, 281191, 91],
               },
             ],
@@ -489,7 +489,7 @@ export default {
             datasets: [
               {
                 label: "v9",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [4, 45, 2054, 243364, 38582, 737, 20, 1],
               },
             ],
@@ -538,7 +538,7 @@ export default {
             datasets: [
               {
                 label: "v10",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [10, 57, 139, 85872, 197607, 1058, 63, 1],
               },
             ],
@@ -587,7 +587,7 @@ export default {
             datasets: [
               {
                 label: "v11",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [334, 86840, 178984, 18318, 201, 75, 40, 15],
               },
             ],
@@ -636,7 +636,7 @@ export default {
             datasets: [
               {
                 label: "v12",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [30, 56, 58, 155, 12132, 256761, 15612, 3],
               },
             ],
@@ -685,7 +685,7 @@ export default {
             datasets: [
               {
                 label: "v13",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [1, 1343, 46743, 165987, 66427, 4295, 10, 1],
               },
             ],
@@ -734,7 +734,7 @@ export default {
             datasets: [
               {
                 label: "v14",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [11, 68, 144, 496, 51087, 232403, 582, 16],
               },
             ],
@@ -783,7 +783,7 @@ export default {
             datasets: [
               {
                 label: "v15",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [865, 28530, 170357, 83824, 1207, 18, 5, 1],
               },
             ],
@@ -832,7 +832,7 @@ export default {
             datasets: [
               {
                 label: "v16",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [50, 111, 2975, 274500, 7161, 9, 0, 1],
               },
             ],
@@ -881,7 +881,7 @@ export default {
             datasets: [
               {
                 label: "v17",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [19, 36, 84, 83, 164, 239121, 45166, 134],
               },
             ],
@@ -930,7 +930,7 @@ export default {
             datasets: [
               {
                 label: "v18",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [26, 31, 118, 2153, 79799, 188763, 13863, 54],
               },
             ],
@@ -979,7 +979,7 @@ export default {
             datasets: [
               {
                 label: "v19",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [2, 24, 1250, 37435, 206743, 36970, 2334, 49],
               },
             ],
@@ -1030,7 +1030,7 @@ export default {
             datasets: [
               {
                 label: "v20",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [1, 0, 18, 186, 283919, 669, 12, 2],
               },
             ],
@@ -1079,7 +1079,7 @@ export default {
             datasets: [
               {
                 label: "v21",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [1, 7, 33, 563, 283252, 858, 79, 14],
               },
             ],
@@ -1128,7 +1128,7 @@ export default {
             datasets: [
               {
                 label: "v22",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [14, 21, 329, 111804, 172429, 192, 14, 4],
               },
             ],
@@ -1177,7 +1177,7 @@ export default {
             datasets: [
               {
                 label: "v23",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [2, 2, 13, 54, 760, 283776, 183, 17],
               },
             ],
@@ -1226,7 +1226,7 @@ export default {
             datasets: [
               {
                 label: "v24",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [354, 22360, 89213, 158824, 13930, 9, 96, 21],
               },
             ],
@@ -1275,7 +1275,7 @@ export default {
             datasets: [
               {
                 label: "v25",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [2, 6, 33, 3050, 271644, 10032, 31, 9],
               },
             ],
@@ -1324,7 +1324,7 @@ export default {
             datasets: [
               {
                 label: "v26",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [5, 1988, 74107, 161432, 45221, 1564, 445, 45],
               },
             ],
@@ -1373,7 +1373,7 @@ export default {
             datasets: [
               {
                 label: "v27",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [1, 6, 1006, 283729, 63, 1, 0, 1],
               },
             ],
@@ -1422,7 +1422,7 @@ export default {
             datasets: [
               {
                 label: "v28",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [3, 196, 284429, 149, 14, 14, 1, 1],
               },
             ],
@@ -1473,7 +1473,7 @@ export default {
             datasets: [
               {
                 label: "amount",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [284571, 206, 22, 4, 1, 1, 1, 1],
               },
             ],
@@ -1524,7 +1524,7 @@ export default {
             datasets: [
               {
                 label: "amount",
-                backgroundColor: "#f87979",
+                backgroundColor: "#00ae31a8",
                 data: [284571, 206, 22, 4, 1, 1, 1, 1],
               },
             ],

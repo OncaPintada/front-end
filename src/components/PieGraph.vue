@@ -17,7 +17,7 @@ export default {
         labels: ["Não Fraude", "Fraude"],
         datasets: [
           {
-            backgroundColor: ["#00AE30", "#AD0000"],
+            backgroundColor: ["#00ae31a8", "#ff3737d4"],
             data: [284315, 492],
           },
         ],
