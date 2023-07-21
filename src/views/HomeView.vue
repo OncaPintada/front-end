@@ -151,7 +151,7 @@
     </div>
     <p class="mb-4">
       Através do gráfico, vemos que os atributos que mais se diferem entre as
-      classes (fraude ou não fraude) são esses: v3, v7, v9, v10, v11, v12, v14,
+      classes (fraude ou não fraude) são esses: v3, v4, v9, v10, v11, v12, v14,
       v16, v17, v18.
     </p>
   </div>
@@ -175,6 +175,10 @@
 .dropdown-menu {
   max-height: 300px;
   overflow-y: scroll;
+}
+
+.dropdown-menu li:active {
+  background-color: #00ae31a8;
 }
 
 p a:hover {
@@ -204,7 +208,7 @@ import BarGraphCor from "@/components/BarGraphCor.vue"
 import LineGraphPar from "@/components/LineGraphPar.vue";
 
 export default {
-  components: { PieGraph, BarGraph, BarGraphCor, LineGraphPar },
+  components: { PieGraph, BarGraph, BarGraphCor, LineGraphPar},
   methods: {
     onClick(str) {
       this.attr = str;
