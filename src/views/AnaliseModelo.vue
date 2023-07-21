@@ -167,7 +167,7 @@
     </p>
     <div class="chart-container mt-3 mb-3">
       <!-- Gráfico - Importância dos atributos -->
-      <BarGraphImpor/>
+      <BarGraphImpor />
     </div>
     <p class="mb-4">Fizemos 3 tipos de seleção:</p>
     <ul>
@@ -277,12 +277,8 @@
 }
 </style>
 <script>
-  import BarGraphImpor from '@/components/BarGraphImpor.vue';
+import BarGraphImpor from '@/components/BarGraphImpor.vue';
   export default {
-    return: {
-      components: {
-        BarGraphImpor
-      }
-    }
+  components: {BarGraphImpor}
   }
 </script>
