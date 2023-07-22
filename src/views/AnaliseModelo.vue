@@ -1,6 +1,6 @@
 <template>
   <div class="view container container-fluid">
-    <h1 class="mt-5 mb-3 title text-center">Análise Modelos</h1>
+    <h1 class="mt-5 mb-3 title">Análise Modelos</h1>
 
     <p class="mb-4">
       Agora que já sabemos a forma da nossa base de dados, vamos analisá-la a
@@ -70,9 +70,14 @@
     </p>
     <p class="mb-4">
       O modelo que obteve a melhor performance foi o Random Forest e se
-      aproximou de resultados obtidos na literatura científica. Ele não errou
-      nenhum dos casos que classificou como fraude (da partição de validação) e
-      obteve as melhores métricas de avaliação:
+      aproximou de resultados obtidos na
+      <a
+        class="text-reset link-success link-underline-opacity-25 link-underline-opacity-100-hover"
+        href="https://ieeexplore.ieee.org/document/8717766"
+        target="_blank"
+        >literatura científica</a
+      >. Ele não errou nenhum dos casos que classificou como fraude (da partição
+      de validação) e obteve as melhores métricas de avaliação:
     </p>
     <div class="tablePar">
       <table class="table tableMat table-bordered mb-4 mb-3">
@@ -157,8 +162,8 @@
       Decidimos nos aprofundar no Random Forest e analisar os casos que ele
       classificou errado. Com as nossas análises, chegamos a conclusão que os
       objetos mal classificados tinham valores de atributos mais distribuídos.
-      Apesar disso, os dois grupos eram parecidos, o que pode indicar que com
-      mais exemplos poderia-se obter um classificador melhor.
+      Apesar disso, os dois grupos eram parecidos, o que pode indicar que tais
+      casos eram exceções ás regras formadas pelo modelo.
     </p>
     <p class="mb-4">
       Além disso, implementamos o modelo novamente, agora selecionando os
@@ -173,7 +178,7 @@
     <ul>
       <li>Uma utilizando o TruncatedSVD</li>
       <li>Uma utilizando o PCA</li>
-      <li>E uma excluindo os atributos menos importantes</li>
+      <li>E uma excluindo os atributos</li>
     </ul>
     <p class="mb-4">
       Nos dois primeiros casos, os algoritmos utilizados reduziram os atributos
@@ -183,7 +188,8 @@
     </p>
     <p class="mb-4">
       A redução de atributos obteve resultados muito semelhantes com os
-      anteriores:
+      anteriores. Aqui vemos as métricas obtidas com a exclusão de atributos e a
+      utilização do Oversamplig (RandomUnderSampler):
     </p>
     <div class="chart-container mt-3 mb-3">
       <!-- Gráfico - Resultados da redução de atributos -->
@@ -209,30 +215,30 @@
               <th class="table-secondary">0</th>
               <td>1.00</td>
               <td>1.00</td>
-              <td>0.80</td>
-              <td>1.00</td>
-              <td>0.89</td>
               <td>0.81</td>
+              <td>1.00</td>
+              <td>0.90</td>
+              <td>0.83</td>
               <td>45505</td>
             </tr>
             <tr>
               <th class="table-secondary">1</th>
+              <td>0.93</td>
+              <td>0.81</td>
               <td>1.00</td>
+              <td>0.87</td>
+              <td>0.90</td>
               <td>0.80</td>
-              <td>1.00</td>
-              <td>0.88</td>
-              <td>0.89</td>
-              <td>0.78</td>
               <td>64</td>
             </tr>
             <tr>
               <th class="table-secondary">Total/Média</th>
               <td>1.00</td>
               <td>1.00</td>
-              <td>0.78</td>
+              <td>0.81</td>
               <td>1.00</td>
-              <td>0.88</td>
-              <td>0.80</td>
+              <td>0.90</td>
+              <td>0.83</td>
               <td>45569</td>
             </tr>
           </tbody>
@@ -240,11 +246,56 @@
       </div>
     </div>
     <p class="mb-4">
+      A importância dos atributos do modelo correspondente as métricas
+      anteriores ficou assim:
+    </p>
+    <div class="chart-container mt-3 mb-3">
+      <BarGraphImporSel />
+    </div>
+    <p class="mb-4">
       Portanto, concluímos que a redução de atributos não afetou
       significativamente a performance do modelo, mantendo resultados similares
-      aos obtidos anteriormente. Além disso, a seleção de atributos permite uma
-      simplificação dos dados e redução da dimensionalidade, o que pode ser
-      benéfico em termos de tempo de processamento e espaço de armazenamento.
+      aos obtidos anteriormente.
+    </p>
+    <p class="mb-4">
+      Em relação a seleção de atributos, concluímos que ela é benéfica, já que
+      não prejudica a qualidade do modelo e aumenta a sua eficiência. Isso
+      porque com menos atributos o modelo demora menos para ser treinado e sua
+      complexidade diminui.
+    </p>
+    <p class="mb-4">
+      Para melhorar as métricas obtidas, uma alternativa seria aumentar o número
+      de atributos da base de dados. Isso porque, o modelo teria acesso a mais
+      informação e poderia aprender melhor as características das transações
+      fraudulentas e não fraudulentas. Dessa forma, reunimos sugestões de
+      atributos que enriqueceriam esse dataset:
+    </p>
+    <ul>
+      <li class="mb-2">Se é a primeira vez utilizando o cartão</li>
+      <li class="mb-2">Quantidade de transações recentes</li>
+      <li class="mb-2">Localização da transação</li>
+      <li class="mb-2">
+        Se feita por meio de aplicativo, quantidade de transações pelo mesmo
+        dispositivo
+      </li>
+      <li class="mb-2">Se conta está sendo acessada por dispositivo novo</li>
+      <li class="mb-2">Média de valor das transações da conta</li>
+      <li class="mb-2">
+        Se transação é maior do que o normal para aquela conta
+      </li>
+      <li class="mb-2">Tipo de transação (Internet, PIX, Máquina, etc)</li>
+      <li class="mb-2">País da compra</li>
+      <li class="mb-2">Data da transação</li>
+      <li class="mb-4">Limite do cartão</li>
+    </ul>
+    <p class="mb-4">
+      Para ver a análise completa acesse:
+      <a
+        class="text-reset link-success link-underline-opacity-25 link-underline-opacity-100-hover"
+        href="https://colab.research.google.com/drive/1G5NoHiNiGNh2n7u1FRblSz8YKFTTSqYm?usp=sharing"
+        target="_blank"
+        >EntregaFinal.ipynb</a
+      >
     </p>
   </div>
 </template>
@@ -275,10 +326,18 @@
 .table caption {
   text-align: center;
 }
+.title {
+  color: #2d2d2d;
+  font-family: Inter;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+}
 </style>
 <script>
-import BarGraphImpor from '@/components/BarGraphImpor.vue';
-  export default {
-  components: {BarGraphImpor}
-  }
+import BarGraphImpor from "@/components/BarGraphImpor.vue";
+import BarGraphImporSel from "@/components/BarGraphImporSel.vue";
+export default {
+  components: { BarGraphImpor, BarGraphImporSel },
+};
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="view container">
-    <h1 class="mt-5 mb-3 title text-center">Prevenção de Fraudes</h1>
+    <h1 class="mt-5 mb-3 title">Prevenção de Fraudes</h1>
     <h2 class="mt-4 mb-3 sub-title">Práticas Empresariais</h2>
     <ul>
       <li class="mb-4">
@@ -40,6 +40,18 @@
 <style>
 .view {
   margin: 0 auto;
-  width: 1440px;
+  width: 1100px;
+  color: #2d2d2d;
+  font-family: Inter;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 500;
+}
+.title {
+  color: #2d2d2d;
+  font-family: Inter;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
 }
 </style>

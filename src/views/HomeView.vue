@@ -1,6 +1,6 @@
 <template>
   <div class="view container container-fluid">
-    <h1 class="mt-5 mb-3 title text-center">Base de Dados</h1>
+    <h1 class="mt-5 mb-3 title">Base de Dados</h1>
     <p class="">
       A
       <a
@@ -54,36 +54,8 @@
       como é possível observar:
     </p>
     <div class="mb-4" id="barPar">
-      <BarGraph nameAttr="time" v-if="this.attr == 'time'" />
-      <BarGraph nameAttr="v1" v-if="this.attr == 'v1'" />
-      <BarGraph nameAttr="v2" v-if="attr == 'v2'" />
-      <BarGraph nameAttr="v3" v-if="attr == 'v3'" />
-      <BarGraph nameAttr="v4" v-if="attr == 'v4'" />
-      <BarGraph nameAttr="v5" v-if="attr == 'v5'" />
-      <BarGraph nameAttr="v6" v-if="attr == 'v6'" />
-      <BarGraph nameAttr="v7" v-if="attr == 'v7'" />
-      <BarGraph nameAttr="v8" v-if="attr == 'v8'" />
-      <BarGraph nameAttr="v9" v-if="attr == 'v9'" />
-      <BarGraph nameAttr="v10" v-if="attr == 'v10'" />
-      <BarGraph nameAttr="v11" v-if="attr == 'v11'" />
-      <BarGraph nameAttr="v12" v-if="attr == 'v12'" />
-      <BarGraph nameAttr="v13" v-if="attr == 'v13'" />
-      <BarGraph nameAttr="v14" v-if="attr == 'v14'" />
-      <BarGraph nameAttr="v15" v-if="attr == 'v15'" />
-      <BarGraph nameAttr="v16" v-if="attr == 'v16'" />
-      <BarGraph nameAttr="v17" v-if="attr == 'v17'" />
-      <BarGraph nameAttr="v18" v-if="attr == 'v18'" />
-      <BarGraph nameAttr="v19" v-if="attr == 'v19'" />
-      <BarGraph nameAttr="v20" v-if="attr == 'v20'" />
-      <BarGraph nameAttr="v21" v-if="attr == 'v21'" />
-      <BarGraph nameAttr="v22" v-if="attr == 'v22'" />
-      <BarGraph nameAttr="v23" v-if="attr == 'v23'" />
-      <BarGraph nameAttr="v24" v-if="attr == 'v24'" />
-      <BarGraph nameAttr="v25" v-if="attr == 'v25'" />
-      <BarGraph nameAttr="v26" v-if="attr == 'v26'" />
-      <BarGraph nameAttr="v27" v-if="attr == 'v27'" />
-      <BarGraph nameAttr="v28" v-if="attr == 'v28'" />
-      <BarGraph nameAttr="amount" v-if="attr == 'amount'" />
+      <BarGraph :nameAttr="value" v-if="attr == 0" />
+      <BarGraph :nameAttr="value" v-if="attr == 1" />
     </div>
     <div class="dropdown mb-4 d-flex justify-content-center">
       <button
@@ -137,7 +109,7 @@
     </p>
     <div class="mb-4">
       <!-- Gráfico - Correlação dos atributos -->
-      <BarGraphCor/>
+      <BarGraphCor />
     </div>
     <p class="mb-4">
       Percebemos que há uma correlação negativa da classe com as colunas v1, v3,
@@ -147,7 +119,7 @@
     </p>
     <div class="mb-4">
       <!-- Gráfico - Valores dos atributos -->
-      <LineGraphPar/>
+      <LineGraphPar />
     </div>
     <p class="mb-4">
       Através do gráfico, vemos que os atributos que mais se diferem entre as
@@ -204,19 +176,26 @@ p a:hover {
 <script lang="jsx">
 import PieGraph from "@/components/PieGraph.vue";
 import BarGraph from "@/components/BarGraph.vue";
-import BarGraphCor from "@/components/BarGraphCor.vue"
+import BarGraphCor from "@/components/BarGraphCor.vue";
 import LineGraphPar from "@/components/LineGraphPar.vue";
 
 export default {
-  components: { PieGraph, BarGraph, BarGraphCor, LineGraphPar},
+  components: { PieGraph, BarGraph, BarGraphCor, LineGraphPar },
   methods: {
     onClick(str) {
-      this.attr = str;
+      if (this.attr == 0) {
+        this.value = `${str}`;
+        this.attr = 1;
+      } else {
+        this.value = `${str}`;
+        this.attr = 0;
+      }
     },
   },
   data() {
     return {
-      attr: "time",
+      attr: 0,
+      value: "time",
     };
   },
 };
