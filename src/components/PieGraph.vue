@@ -44,16 +44,16 @@ export default {
             },
           },
           tooltip: {
-              // This more specific font property overrides the global property
-              titleFont: {
-                size: 23,
-                family: "'Raleway', sans-serif"
-              },
-              bodyFont: {
-                size: 23,
-                family: " sans-serif"
-              },
-              padding: 15
+            // This more specific font property overrides the global property
+            titleFont: {
+              size: 23,
+              family: "'Raleway', sans-serif",
+            },
+            bodyFont: {
+              size: 23,
+              family: " sans-serif",
+            },
+            padding: 15,
           },
         },
       },

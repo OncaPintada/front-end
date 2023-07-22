@@ -1,14 +1,22 @@
 <template>
   <nav class="navbarOnca">
     <div class="subNavOnca">
-      <img src="../assets/icon.png" alt="Fraude Pintada" class="logo">
+      <img src="../assets/icon.png" alt="Fraude Pintada" class="logo" />
       <div class="nameGroup">Grupo Cionça Pindados</div>
     </div>
   </nav>
   <div class="nav">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid subNav">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -33,18 +41,18 @@
 </template>
 
 <script>
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-export default {}
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+export default {};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 .view {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .custom-bg .nav-link {
@@ -74,7 +82,7 @@ export default {}
   z-index: 1;
 }
 
-.nameGroup{
+.nameGroup {
   color: #000;
   font-family: Raleway, sans-serif;
   font-size: 40px;
@@ -84,7 +92,7 @@ export default {}
 }
 .nav {
   width: 100%;
-  background-color: #00AE30;
+  background-color: #00ae30;
 }
 .navbar {
   width: 1440px;
@@ -92,7 +100,7 @@ export default {}
 }
 
 .navbar a {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Inter, sans-serif;
   font-size: 20px;

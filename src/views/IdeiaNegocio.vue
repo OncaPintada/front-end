@@ -5,43 +5,67 @@
       <div class="realTimeGraph">
         <div class="graphRealPar">
           <Line
-            :data="chartData"
-            :options="chartOptions"
+            :data="this.chartData"
+            :options="this.chartOptions"
             v-if="graphValue == 0"
+          /><Line
+            :data="this.chartData"
+            :options="this.chartOptions"
+            v-if="graphValue == 1"
           />
         </div>
       </div>
       <div class="graphInformationSmall transactionsQuan">
         <div class="subInfo">
           <p class="textInf">Transações analisadas</p>
-          <p class="textInf green">123123</p>
+          <p class="textInf green">
+            {{ numberTransations }}
+          </p>
         </div>
       </div>
       <div class="graphInformationSmall possibleFrauds">
         <div class="subInfo">
           <p class="textInf">Possíveis fraudes</p>
-          <p class="textInf red">451</p>
+          <p class="textInf red">{{ possibleFrauds }}</p>
         </div>
       </div>
       <div class="graphInformationSmall lastFrauds">
         <div class="subInfo">
           <p class="textInf">Proporção fraudes</p>
-          <p class="textInf green">12%</p>
+          <p class="textInf red" v-if="tendency == 'down'">
+            <img src="../assets/up.png" alt="Up triangle" />
+            {{ Math.round((possibleFrauds / numberTransations) * 100) }}%
+          </p>
+          <p class="textInf green" v-if="tendency == 'up'">
+            <img src="../assets/down.png" alt="Down triangle" />
+            {{ Math.round((possibleFrauds / numberTransations) * 100) }}%
+          </p>
         </div>
       </div>
       <div class="graphInformationSmall lastTransactions">
         <div class="subInfo">
           <p class="textInf">Últimas transações</p>
-          <p class="textInf green">1.03%</p>
+          <p class="textInf red" v-if="tendencyLast == 'down'">
+            <img src="../assets/up.png" alt="Up triangle" />{{
+              lastTransactions
+            }}%
+          </p>
+          <p class="textInf green" v-if="tendencyLast == 'up'">
+            <img src="../assets/down.png" alt="Down triangle" />{{
+              lastTransactions
+            }}%
+          </p>
         </div>
       </div>
       <div class="graphInformationLarge">
         <div class="subInfo">
-          <p class="textInf">Termômetro das Transações</p>
-          <p class="textInf blue" v-if="temp == 'low'">ABAIXO DO NORMAL</p>
-          <p class="textInf green" v-if="temp == 'normal'">NORMAL</p>
-          <p class="textInf yellow" v-if="temp == 'high'">ACIMA DO NORMAL</p>
-          <p class="textInf red" v-if="temp == 'alert'">ALERTA!</p>
+          <p class="textInf">Termômetro das transações</p>
+          <p class="textInf blue" v-if="this.temp == 'low'">ABAIXO DO NORMAL</p>
+          <p class="textInf green" v-if="this.temp == 'normal'">NORMAL</p>
+          <p class="textInf yellow" v-if="this.temp == 'high'">
+            ACIMA DO NORMAL
+          </p>
+          <p class="textInf red" v-if="this.temp == 'alert'">ALERTA!</p>
         </div>
       </div>
     </div>
@@ -146,6 +170,13 @@
   font-size: 27px;
   font-style: normal;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.textInf img {
+  width: 13.14%;
+  margin: 2%;
 }
 .green {
   color: #0dab09;
@@ -190,35 +221,59 @@ ChartJS.register(
 export default {
   mounted() {
     setInterval(() => {
+      const aux = [];
+      const aux_ = [];
+      const lastLastTransaction = this.lastTransactions;
+      const lastProportionFrauds = Math.round(
+        (this.possibleFrauds / this.numberTransations) * 100
+      );
+      this.chartData.datasets[0].data.forEach((ele) => aux.push(ele));
+      this.chartData.labels.forEach((ele) => aux_.push(ele));
+      aux.push(this.getRandomInt());
+      aux_.push(this.numberTransations + 1);
+      this.numberTransations += 1;
+      if (aux.slice(-1)[0] == 1) {
+        this.possibleFrauds += 1;
+      }
+      this.lastTransactions = Math.round(
+        (aux.filter((el) => el == 1).length / aux.length) * 100
+      );
+      if (lastLastTransaction > this.lastTransactions) {
+        this.tendencyLast = "up";
+      } else {
+        this.tendencyLast = "down";
+      }
+      this.proportionFrauds = Math.round(
+        (this.possibleFrauds / this.numberTransations) * 100
+      );
+      if (lastProportionFrauds > this.proportionFrauds) {
+        this.tendency = "up";
+      } else {
+        this.tendency = "down";
+      }
+      if (this.lastTransactions > 25) {
+        this.temp = "alert";
+      } else if (this.lastTransactions > 15) {
+        this.temp = "high";
+      } else if (this.lastTransactions > 10) {
+        this.temp = "normal";
+      } else {
+        this.temp = "low";
+      }
       this.chartData = {
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-        ],
+        labels: aux_.slice(-30),
         datasets: [
           {
-            label: "Data One",
-            backgroundColor: "#f87979",
-            data: [
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-            ],
+            label: "Classificação",
+            backgroundColor: "#00ae31a8",
+            borderColor: "#00ae31a8",
+            data: aux.slice(-30),
           },
         ],
       };
-      this.graphValue = 1;
       this.graphValue = 0;
-    }, 3000);
+      this.graphValue = 1;
+    }, 1000);
   },
   components: {
     Line,
@@ -227,29 +282,72 @@ export default {
   data() {
     return {
       getRandomInt() {
-        return Math.floor(Math.random() * (50 - 5 + 1)) + 5;
+        return Math.floor(Math.random() + 0.25);
       },
       graphValue: 0,
-      temp: "low",
+      temp: "alert",
+      numberTransations: 25,
+      possibleFrauds: 7,
+      proportionFrauds: 28,
+      lastTransactions: 28,
+      tendency: "up",
+      tendencyLast: "up",
       chartOptions: {
         responsive: true,
         maintainAspectRatio: false,
+        borderColor: "#00ae31a8",
+        scales: {
+          y: {
+            max: 2.0,
+            min: -1.0,
+          },
+        },
+        plugins: {
+          legend: {
+            position: "top",
+            labels: {
+              // This more specific font property overrides the global property
+              font: {
+                size: 23,
+                family: "'Raleway', sans-serif",
+              },
+            },
+          },
+          title: {
+            display: false,
+            text: "Distribuição atributos",
+            font: {
+              size: 23,
+              family: "'Raleway', sans-serif",
+            },
+          },
+          tooltip: {
+            // This more specific font property overrides the global property
+            titleFont: {
+              size: 23,
+              family: "'Raleway', sans-serif",
+            },
+            bodyFont: {
+              size: 23,
+              family: " sans-serif",
+            },
+            padding: 15,
+          },
+        },
       },
       chartData: {
         labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+          21, 22, 23, 24, 25,
         ],
         datasets: [
           {
-            label: "Data One",
-            backgroundColor: "#f87979",
-            data: [40, 39, 10, 40, 39, 80, 40],
+            label: "Classificação",
+            backgroundColor: "#00ae31a8",
+            data: [
+              0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1,
+              0, 0, 1,
+            ],
           },
         ],
       },
