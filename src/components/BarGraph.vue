@@ -54,7 +54,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -63,18 +63,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -104,7 +104,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -113,18 +113,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -153,7 +153,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -162,18 +162,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -204,7 +204,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -213,18 +213,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -253,7 +253,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -262,18 +262,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -304,7 +304,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -313,18 +313,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -353,7 +353,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -362,18 +362,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -402,7 +402,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -411,18 +411,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -453,7 +453,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -462,18 +462,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -502,7 +502,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -511,18 +511,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -551,7 +551,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -560,18 +560,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -600,7 +600,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -609,18 +609,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -649,7 +649,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -658,18 +658,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -698,7 +698,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -707,18 +707,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -747,7 +747,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -756,18 +756,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -796,7 +796,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -805,18 +805,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -845,7 +845,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -854,18 +854,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -894,7 +894,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -903,18 +903,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -943,7 +943,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -952,18 +952,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -992,7 +992,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1001,18 +1001,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1043,7 +1043,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1052,18 +1052,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1092,7 +1092,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1101,18 +1101,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1141,7 +1141,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1150,18 +1150,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1190,7 +1190,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1199,18 +1199,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1239,7 +1239,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1248,18 +1248,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1288,7 +1288,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1297,18 +1297,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1337,7 +1337,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1346,18 +1346,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1386,7 +1386,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1395,18 +1395,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1435,7 +1435,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1444,18 +1444,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1486,7 +1486,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1495,18 +1495,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,
@@ -1537,7 +1537,7 @@ export default {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    size: 23,
+                    size: 19,
                     family: "'Raleway', sans-serif",
                   },
                 },
@@ -1546,18 +1546,18 @@ export default {
                 display: true,
                 text: "Distribuição atributos",
                 font: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
               },
               tooltip: {
                 // This more specific font property overrides the global property
                 titleFont: {
-                  size: 23,
+                  size: 19,
                   family: "'Raleway', sans-serif",
                 },
                 bodyFont: {
-                  size: 23,
+                  size: 19,
                   family: " sans-serif",
                 },
                 padding: 15,

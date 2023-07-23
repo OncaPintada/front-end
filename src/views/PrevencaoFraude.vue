@@ -75,4 +75,26 @@
   font-style: normal;
   font-weight: 700;
 }
+@media screen and (max-width: 1100px) {
+  .view, .btn {
+    font-size: 19px;
+  }
+  .title {
+  font-size: 35px;
+  }
+  .sub-title {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .view, .btn {
+    font-size: 13px;
+  }
+  .title {
+  font-size: 25px;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
+}
 </style>

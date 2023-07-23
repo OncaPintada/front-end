@@ -74,13 +74,13 @@
 
 <style>
 .viewCus {
-  margin: 50px auto;
   padding: 0;
+  margin: 50px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  width: 1440px;
+  width: 100%;
   height: 825px;
   color: #2d2d2d;
   font-family: Inter;
@@ -97,7 +97,7 @@
     "graph graph graph transactionsQuan"
     "graph graph graph possibleFrauds"
     "lastFrauds lastTransactions graphInformationLarge graphInformationLarge";
-  width: 92.15%;
+  width: 1327px;
   height: 825px;
   border-radius: 20px;
   background: #f0f0f0;
@@ -194,6 +194,66 @@
   width: 90%;
   height: 90%;
 }
+@media screen and (max-width: 1350px) {
+  .viewCus {
+    margin: 40px 0px;
+    height: 675px;
+  }
+  .realTimeGraph {
+    width: 655px;
+    height: 368px;
+  }
+  .graphInformationSmall {
+    width: 244px;
+    height: 178px;
+  }
+  .graphInformationLarge {
+    width: 400px;
+    height: 178px;
+  }
+  .wigPar {
+    width: 955px;
+    height: 675px;
+    grid-template-columns: 277px 254px 156px 267px;
+    grid-template-rows: 91px 189px 189px 215px;
+  }
+  .textInf {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .viewCus {
+    margin: 30px 0px;
+    height: 487px;
+  }
+  .realTimeGraph {
+    width: 463px;
+    height: 265px;
+  }
+  .graphInformationSmall {
+    width: 172px;
+    height: 128px;
+  }
+  .graphInformationLarge {
+    width: 283px;
+    height: 128px;
+  }
+  .wigPar {
+    width: 675px;
+    height: 487px;
+    grid-template-columns: 195px 179px 113px 188px;
+    grid-template-rows: 65px 137px 137px 132px;
+  }
+  .textInf {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 28px;
+  }
+}
 </style>
 <script>
 import {
@@ -240,7 +300,7 @@ export default {
       );
       if (lastLastTransaction > this.lastTransactions) {
         this.tendencyLast = "up";
-      } else {
+      } else if (lastLastTransaction < this.lastTransactions) {
         this.tendencyLast = "down";
       }
       this.proportionFrauds = Math.round(
@@ -248,7 +308,7 @@ export default {
       );
       if (lastProportionFrauds > this.proportionFrauds) {
         this.tendency = "up";
-      } else {
+      } else if (lastProportionFrauds < this.proportionFrauds) {
         this.tendency = "down";
       }
       if (this.lastTransactions > 25) {

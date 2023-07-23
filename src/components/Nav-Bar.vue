@@ -51,9 +51,7 @@ export default {};
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-.view {
-  font-family: "Raleway", sans-serif;
-}
+
 
 .custom-bg .nav-link {
   color: white;
@@ -106,5 +104,21 @@ export default {};
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
+}
+@media screen and (max-width: 1100px) {
+  .nameGroup {
+  font-size: 35px;
+  }
+  .navbarOnca {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .nameGroup {
+  font-size: 30px;
+  }
+  .navbarOnca {
+    height: 85px;
+  }
 }
 </style>

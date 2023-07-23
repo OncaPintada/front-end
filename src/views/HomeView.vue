@@ -138,7 +138,7 @@
   margin: 0 auto;
   width: 1100px;
   color: #2d2d2d;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-size: 23px;
   font-style: normal;
   font-weight: 500;
@@ -171,6 +171,23 @@ p a:hover {
 }
 .link-success {
   color: #00ae31a8;
+}
+
+@media screen and (max-width: 1100px) {
+  .view, .btn {
+    font-size: 19px;
+  }
+  .title {
+  font-size: 35px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .view, .btn {
+    font-size: 13px;
+  }
+  .title {
+  font-size: 25px;
+  }
 }
 </style>
 <script lang="jsx">

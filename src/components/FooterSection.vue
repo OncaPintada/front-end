@@ -1,7 +1,9 @@
 <template>
   <footer class="footer-section">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div>
+    <div
+      class="container d-flex justify-content-between align-items-center subFooter"
+    >
+      <div class="subFooterDevs">
         <p>Desenvolvido por:</p>
         <ul class="devs">
           <li>
@@ -33,20 +35,19 @@
         </ul>
         <p>© Copyright 2023 Grupo Cionça Pindados</p>
       </div>
-      <a href="https://pantanal.dev" target="_blank"
-        ><img src="../assets/logo-pantanal.png" alt="Logo pantanal.dev"
-      /></a>
+      <div class="imgPan">
+        <a href="https://pantanal.dev" target="_blank"
+          ><img src="../assets/logo-pantanal.png" alt="Logo pantanal.dev"
+        /></a>
+      </div>
     </div>
   </footer>
 </template>
 
 <style>
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .devs {
   list-style: none;
   padding: 0;
@@ -54,46 +55,67 @@ body {
 
 .devs a {
   color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 .devs a:hover {
   color: rgb(3, 70, 13);
 }
-.site-content {
-  flex: 1 0 auto;
+.footer-section p {
+  margin: 0;
 }
-
 .footer-section {
-  background-color: #00ae30;
-  color: #ffffff;
-  padding: 20px 0;
+  height: 211px;
   width: 100%;
+  background-color: #00ae30;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
 }
-
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+.subFooterDevs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-
-.d-flex {
-  display: flex !important;
+.subFooter {
+  height: 100%;
 }
-
-.justify-content-between {
-  justify-content: space-between !important;
+.imgPan {
+  height: 70%;
 }
-
-.align-items-center {
-  align-items: center !important;
+.imgPan img {
+  height: 100%;
 }
-
-.button-container {
-  margin-left: auto;
+@media screen and (max-width: 1100px) {
+  .footer-section {
+    height: 180px;
+    font-size: 12px;
+  }
+  .devs a {
+    font-size: 12px;
+  }
 }
-
-.mt-2 {
-  margin-top: 8px;
+@media screen and (max-width: 950px) {
+  .footer-section {
+    height: 160px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .footer-section {
+    height: 140px;
+    font-size: 9px;
+  }
+  .devs a {
+    font-size: 9px;
+  }
 }
 </style>
