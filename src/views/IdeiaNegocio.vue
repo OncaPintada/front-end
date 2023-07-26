@@ -267,7 +267,8 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "vue-chartjs";
-
+import x_test from "@/assets/X_test.json";
+//
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -279,7 +280,19 @@ ChartJS.register(
 );
 
 export default {
-  mounted() {
+  async mounted() {
+    let jsonResponse;
+    const requestOptions = {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        listItems: x_test,
+      }),
+    };
+    jsonResponse = await this.fetchClassification("http://127.0.0.1:8000/classificationAll", requestOptions)
+    this.classficationList = jsonResponse.classification
     setInterval(() => {
       const aux = [];
       const aux_ = [];
@@ -289,7 +302,7 @@ export default {
       );
       this.chartData.datasets[0].data.forEach((ele) => aux.push(ele));
       this.chartData.labels.forEach((ele) => aux_.push(ele));
-      aux.push(this.getRandomInt());
+      aux.push(this.classficationList[this.numberTransations]);
       aux_.push(this.numberTransations + 1);
       this.numberTransations += 1;
       if (aux.slice(-1)[0] == 1) {
@@ -311,11 +324,11 @@ export default {
       } else if (lastProportionFrauds < this.proportionFrauds) {
         this.tendency = "down";
       }
-      if (this.lastTransactions > 25) {
+      if (this.lastTransactions > 15) {
         this.temp = "alert";
-      } else if (this.lastTransactions > 15) {
-        this.temp = "high";
       } else if (this.lastTransactions > 10) {
+        this.temp = "high";
+      } else if (this.lastTransactions > 5) {
         this.temp = "normal";
       } else {
         this.temp = "low";
@@ -341,15 +354,21 @@ export default {
   methods: {},
   data() {
     return {
+      async fetchClassification(url, requestOptions) {
+        let response = await fetch(url, requestOptions);
+        response = await response.json();
+        return response;
+      },
       getRandomInt() {
         return Math.floor(Math.random() + 0.25);
       },
+      classficationList: [],
       graphValue: 0,
-      temp: "alert",
-      numberTransations: 25,
-      possibleFrauds: 7,
-      proportionFrauds: 28,
-      lastTransactions: 28,
+      temp: "low",
+      numberTransations: 20,
+      possibleFrauds: 1,
+      proportionFrauds: 5,
+      lastTransactions: 5,
       tendency: "up",
       tendencyLast: "up",
       chartOptions: {
@@ -358,8 +377,8 @@ export default {
         borderColor: "#00ae31a8",
         scales: {
           y: {
-            max: 2.0,
-            min: -1.0,
+            max: 1.5,
+            min: -0.5,
           },
         },
         plugins: {
@@ -397,16 +416,14 @@ export default {
       },
       chartData: {
         labels: [
-          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-          21, 22, 23, 24, 25,
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
         ],
         datasets: [
           {
             label: "Classificação",
             backgroundColor: "#00ae31a8",
             data: [
-              0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1,
-              0, 0, 1,
+              1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
             ],
           },
         ],

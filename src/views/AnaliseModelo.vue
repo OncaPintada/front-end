@@ -34,6 +34,10 @@
       todos os modelos ele foi o que pior performou, classificando erroneamente
       muitos casos de não fraude como fraude.
     </p>
+    <p class="mb-4">
+      Matrix de confusão para o modelo de Decision Tree utilizando
+      undersampling:
+    </p>
     <div class="tablePar">
       <table class="table tableMat table-bordered mb-4 mb-3">
         <caption>
@@ -77,7 +81,8 @@
         target="_blank"
         >literatura científica</a
       >. Ele não errou nenhum dos casos que classificou como fraude (da partição
-      de validação) e obteve as melhores métricas de avaliação:
+      de validação) e obteve as melhores métricas de validação. Para a partição
+      de teste, ele atingiu os seguintes resultados:
     </p>
     <div class="tablePar">
       <table class="table tableMat table-bordered mb-4 mb-3">
@@ -95,13 +100,13 @@
         <tbody>
           <tr>
             <th class="table-secondary">0</th>
-            <td>45505</td>
-            <td>0</td>
+            <td>56862</td>
+            <td>2</td>
           </tr>
           <tr>
             <th class="table-secondary">1</th>
-            <td>14</td>
-            <td>50</td>
+            <td>22</td>
+            <td>76</td>
           </tr>
         </tbody>
       </table>
@@ -131,18 +136,18 @@
             <td>0.78</td>
             <td>1.00</td>
             <td>0.88</td>
-            <td>0.80</td>
-            <td>45505</td>
+            <td>0.79</td>
+            <td>56864</td>
           </tr>
           <tr>
             <th class="table-secondary">1</th>
-            <td>1.00</td>
+            <td>0.97</td>
             <td>0.78</td>
             <td>1.00</td>
-            <td>0.88</td>
+            <td>0.86</td>
             <td>0.88</td>
             <td>0.76</td>
-            <td>64</td>
+            <td>98</td>
           </tr>
           <tr>
             <th class="table-secondary">Total/Média</th>
@@ -151,8 +156,8 @@
             <td>0.78</td>
             <td>1.00</td>
             <td>0.88</td>
-            <td>0.80</td>
-            <td>45569</td>
+            <td>0.79</td>
+            <td>56962</td>
           </tr>
         </tbody>
       </table>
@@ -161,14 +166,18 @@
     <p class="mb-4">
       Decidimos nos aprofundar no Random Forest e analisar os casos que ele
       classificou errado. Com as nossas análises, chegamos a conclusão que os
-      objetos mal classificados tinham valores de atributos mais distribuídos.
-      Apesar disso, os dois grupos eram parecidos, o que pode indicar que tais
-      casos eram exceções ás regras formadas pelo modelo.
+      objetos mal classificados tinham valores de atributos parecidos com os da
+      classe oposta. Ou seja, fraudes mal classificadas tem atributos parecidos
+      com não fraudes e não fraudes mal classificadas tem atributos parecidos
+      com fraudes. Isso pode ser visualizado no gráfico:
     </p>
+    <div class="chart-container mt-3 mb-3">
+      <LineGraphParMedian />
+    </div>
     <p class="mb-4">
       Além disso, implementamos o modelo novamente, agora selecionando os
-      atributos mais importantes do modelo anterior. Esse gráfico mostra a
-      importância de cada um dos atributos:
+      atributos mais importantes. Esse gráfico mostra a importância de cada um
+      dos atributos:
     </p>
     <div class="chart-container mt-3 mb-3">
       <!-- Gráfico - Importância dos atributos -->
@@ -189,7 +198,7 @@
     <p class="mb-4">
       A redução de atributos obteve resultados muito semelhantes com os
       anteriores. Aqui vemos as métricas obtidas com a exclusão de atributos e a
-      utilização do Oversamplig (RandomUnderSampler):
+      utilização do Oversampling (RandomOverSampler):
     </p>
     <div class="chart-container mt-3 mb-3">
       <!-- Gráfico - Resultados da redução de atributos -->
@@ -334,22 +343,24 @@
   font-weight: 700;
 }
 @media screen and (max-width: 1100px) {
-  .view, .btn {
+  .view,
+  .btn {
     font-size: 19px;
   }
   .title {
-  font-size: 35px;
+    font-size: 35px;
   }
   .tablePar {
     height: 270px;
   }
 }
 @media screen and (max-width: 800px) {
-  .view, .btn {
+  .view,
+  .btn {
     font-size: 13px;
   }
   .title {
-  font-size: 25px;
+    font-size: 25px;
   }
   .tablePar {
     height: 200px;
@@ -359,7 +370,8 @@
 <script>
 import BarGraphImpor from "@/components/BarGraphImpor.vue";
 import BarGraphImporSel from "@/components/BarGraphImporSel.vue";
+import LineGraphParMedian from "@/components/LineGraphParMedian.vue";
 export default {
-  components: { BarGraphImpor, BarGraphImporSel },
+  components: { BarGraphImpor, BarGraphImporSel, LineGraphParMedian },
 };
 </script>

@@ -1,24 +1,22 @@
-# oncapintada
+# Front-end Cionça Pindados
 
-## Project setup
+## Para instalar as dependências:
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+yarn install
 ```
 
-### Compiles and minifies for production
+### Para densenvolvimento:
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+yarn serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Para produção
+```
+yarn build
+```
+
+### Para rodar o lint:
+```
+yarn lint
+```
+

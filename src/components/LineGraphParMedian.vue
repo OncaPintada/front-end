@@ -14,7 +14,7 @@ import {
   Legend,
 } from "chart.js";
 import { Line } from "vue-chartjs";
-import json from "@/assets/feat-values.json";
+import json from "@/assets/median_analysis.json";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -26,7 +26,7 @@ ChartJS.register(
 );
 
 export default {
-  name: "LineGraphPar",
+  name: "LineGraphParMedian",
   components: {
     Line,
   },
@@ -35,22 +35,29 @@ export default {
     let label = "";
     let backCol = "#BBB";
     let borderColor;
-    for (let x = 0; x < 2; x++) {
-      if (json[x]["class"] == 1) {
-        label = "Fraude";
+    for (let x = 0; x < 4; x++) {
+      if (json[x]["line"] == 1) {
+        label = "Fraude bem classificada";
         backCol = "#ff3737d4";
         borderColor = "#ff3737d4";
-      } else {
-        label = "Não Fraude";
+      } else if (json[x]["line"] == 2){
+        label = "Fraude mal classificada";
         backCol = "#00ae31a8";
         borderColor = "#00ae31a8";
+      } else if  (json[x]["line"] == 3) {
+        label = "Não fraude bem classificada";
+        backCol = "#aa2afab4";
+        borderColor = "#aa2afab4";
+      } else {
+        label = "Não fraude mal classificada";
+        backCol = "#1ba7e3b8";
+        borderColor = "#1ba7e3b8";
       }
       dataset.push({
         label: label,
         backgroundColor: backCol,
         borderColor: borderColor,
         data: [
-          json[x]["time"],
           json[x]["v1"],
           json[x]["v2"],
           json[x]["v3"],
@@ -87,7 +94,6 @@ export default {
       data: json,
       chartData: {
         labels: [
-          "time",
           "v1",
           "v2",
           "v3",
