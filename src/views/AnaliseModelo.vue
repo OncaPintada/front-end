@@ -13,7 +13,7 @@
       diferentes:
     </p>
     <ul>
-      <li>Sem oversampling e undersampling</li>
+      <li>Dataset original (sem oversampling e undersampling)</li>
       <li>Com undersampling, utilizando o algoritmo RandomUnderSampler</li>
       <li>Com oversampling, utilizando o algoritmo SMOTE</li>
       <li>Com oversampling, utilizando o algoritmo RandomOverSampler</li>
@@ -67,10 +67,10 @@
     </div>
     <p class="mb-4">
       Indo na contramão desse caso, as partições sem undersampling e
-      oversampling e as com oversampling (RandomOverSampler) obtiveram os
-      melhores resultados. Já as partições com oversampling (SMOTE) ficaram no
-      meio do caminho, sendo melhores que as com undersampling mas piores que as
-      outras duas partições.
+      oversampling(dataset original) e as com oversampling (RandomOverSampler)
+      obtiveram os melhores resultados. Já as partições com oversampling (SMOTE)
+      ficaram no meio do caminho, sendo melhores que as com undersampling mas
+      piores que as outras duas partições.
     </p>
     <p class="mb-4">
       O modelo que obteve a melhor performance foi o Random Forest e se
@@ -165,24 +165,32 @@
 
     <p class="mb-4">
       Decidimos nos aprofundar no Random Forest e analisar os casos que ele
-      classificou errado. Com as nossas análises, chegamos a conclusão que os
-      objetos mal classificados tinham valores de atributos parecidos com os da
-      classe oposta. Ou seja, fraudes mal classificadas tem atributos parecidos
-      com não fraudes e não fraudes mal classificadas tem atributos parecidos
-      com fraudes. Isso pode ser visualizado no gráfico:
+      classificou errado. Com as nossas análises, chegamos a conclusão que
+      transações mal classificadas tinham valores de atributos parecidos com
+      transações da classe oposta. Ou seja, fraudes mal classificadas tem
+      atributos parecidos com não fraudes e não fraudes mal classificadas tem
+      atributos parecidos com fraudes. Isso pode ser visualizado no gráfico:
     </p>
     <div class="chart-container mt-3 mb-3">
       <LineGraphParMedian />
     </div>
     <p class="mb-4">
-      Além disso, implementamos o modelo novamente, agora selecionando os
-      atributos mais importantes. Esse gráfico mostra a importância de cada um
-      dos atributos:
+      Além disso, a importãncia dos atributos clareia mais ainda a situação. Ele
+      mostra que os atributos mais relevantes para o modelo fazer sua
+      classificação são os mesmos que seguem a regra anteriormente vista. Isso
+      tudo nos leva a crer que o modelo errou pois tais transações não possuem
+      atributos comuns à sua classificação. Ou seja, em tais casos, fraudes se
+      parecem com não fraudes e não fraudes se parecem com fraudes.
     </p>
     <div class="chart-container mt-3 mb-3">
       <!-- Gráfico - Importância dos atributos -->
       <BarGraphImpor />
     </div>
+    <p class="mb-4">
+      Ademais, a fim de obtermos melhores resultados e uma análise mais
+      profunda, decidimos retreinar o RandomForest selecionando atributos.
+      Utlizamos a mesma ideia das quatro partições vista anteriormente.
+    </p>
     <p class="mb-4">Fizemos 3 tipos de seleção:</p>
     <ul>
       <li>Uma utilizando o TruncatedSVD</li>
@@ -197,9 +205,37 @@
     </p>
     <p class="mb-4">
       A redução de atributos obteve resultados muito semelhantes com os
-      anteriores. Aqui vemos as métricas obtidas com a exclusão de atributos e a
-      utilização do Oversampling (RandomOverSampler):
+      anteriores. Aqui vemos a matrix de confusão e as métricas obtidas com a
+      exclusão de atributos e a utilização do Oversampling (RandomOverSampler)
+      para o dataset de teste:
     </p>
+    <div class="tablePar">
+      <table class="table tableMat table-bordered mb-4 mb-3">
+        <caption>
+          Predição do modelo
+        </caption>
+        <thead class="table-success">
+          <tr>
+            <th></th>
+            <th>0</th>
+            <th>1</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th class="table-secondary">0</th>
+            <td>56861</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <th class="table-secondary">1</th>
+            <td>23</td>
+            <td>75</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="chart-container mt-3 mb-3">
       <!-- Gráfico - Resultados da redução de atributos -->
       <div class="tablePar">
@@ -224,45 +260,42 @@
               <th class="table-secondary">0</th>
               <td>1.00</td>
               <td>1.00</td>
-              <td>0.81</td>
+              <td>0.77</td>
               <td>1.00</td>
-              <td>0.90</td>
-              <td>0.83</td>
-              <td>45505</td>
+              <td>0.87</td>
+              <td>0.78</td>
+              <td>56864</td>
             </tr>
             <tr>
               <th class="table-secondary">1</th>
-              <td>0.93</td>
-              <td>0.81</td>
+              <td>0.96</td>
+              <td>0.77</td>
               <td>1.00</td>
+              <td>0.85</td>
               <td>0.87</td>
-              <td>0.90</td>
-              <td>0.80</td>
-              <td>64</td>
+              <td>0.75</td>
+              <td>98</td>
             </tr>
             <tr>
               <th class="table-secondary">Total/Média</th>
               <td>1.00</td>
               <td>1.00</td>
-              <td>0.81</td>
+              <td>0.77</td>
               <td>1.00</td>
-              <td>0.90</td>
-              <td>0.83</td>
-              <td>45569</td>
+              <td>0.87</td>
+              <td>0.78</td>
+              <td>56962</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
-    <p class="mb-4">
-      A importância dos atributos do modelo correspondente as métricas
-      anteriores ficou assim:
-    </p>
+    <p class="mb-4">A importância dos atributos do mesmo modelo:</p>
     <div class="chart-container mt-3 mb-3">
       <BarGraphImporSel />
     </div>
     <p class="mb-4">
-      Portanto, concluímos que a redução de atributos não afetou
+      Portanto, concluímos que a redução de atributos não afeta
       significativamente a performance do modelo, mantendo resultados similares
       aos obtidos anteriormente.
     </p>
@@ -274,7 +307,7 @@
     </p>
     <p class="mb-4">
       Para melhorar as métricas obtidas, uma alternativa seria aumentar o número
-      de atributos da base de dados. Isso porque, o modelo teria acesso a mais
+      de atributos da base de dados. Isso porque, o modelo teria acesso à mais
       informação e poderia aprender melhor as características das transações
       fraudulentas e não fraudulentas. Dessa forma, reunimos sugestões de
       atributos que enriqueceriam esse dataset:

@@ -31,14 +31,9 @@
       </div>
       <div class="graphInformationSmall lastFrauds">
         <div class="subInfo">
-          <p class="textInf">Proporção fraudes</p>
-          <p class="textInf red" v-if="tendency == 'down'">
-            <img src="../assets/up.png" alt="Up triangle" />
-            {{ Math.round((possibleFrauds / numberTransations) * 100) }}%
-          </p>
-          <p class="textInf green" v-if="tendency == 'up'">
-            <img src="../assets/down.png" alt="Down triangle" />
-            {{ Math.round((possibleFrauds / numberTransations) * 100) }}%
+          <p class="textInf">Possível dinheiro fraudado</p>
+          <p class="textInf red">
+            R${{ Math.round(this.fraudMoney * 100) / 100 }}
           </p>
         </div>
       </div>
@@ -268,7 +263,6 @@ import {
 } from "chart.js";
 import { Line } from "vue-chartjs";
 import x_test from "@/assets/X_test.json";
-//
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -291,23 +285,24 @@ export default {
         listItems: x_test,
       }),
     };
-    jsonResponse = await this.fetchClassification("http://127.0.0.1:8000/classificationAll", requestOptions)
-    this.classficationList = jsonResponse.classification
+    jsonResponse = await this.fetchClassification(
+      "http://127.0.0.1:8000/classificationAll",
+      requestOptions
+    );
+    this.classficationList = jsonResponse.classification;
     setInterval(() => {
       const aux = [];
       const aux_ = [];
       const lastLastTransaction = this.lastTransactions;
-      const lastProportionFrauds = Math.round(
-        (this.possibleFrauds / this.numberTransations) * 100
-      );
       this.chartData.datasets[0].data.forEach((ele) => aux.push(ele));
       this.chartData.labels.forEach((ele) => aux_.push(ele));
       aux.push(this.classficationList[this.numberTransations]);
       aux_.push(this.numberTransations + 1);
-      this.numberTransations += 1;
       if (aux.slice(-1)[0] == 1) {
         this.possibleFrauds += 1;
+        this.fraudMoney += x_test[this.numberTransations]["amount"];
       }
+      this.numberTransations += 1;
       this.lastTransactions = Math.round(
         (aux.filter((el) => el == 1).length / aux.length) * 100
       );
@@ -319,11 +314,6 @@ export default {
       this.proportionFrauds = Math.round(
         (this.possibleFrauds / this.numberTransations) * 100
       );
-      if (lastProportionFrauds > this.proportionFrauds) {
-        this.tendency = "up";
-      } else if (lastProportionFrauds < this.proportionFrauds) {
-        this.tendency = "down";
-      }
       if (this.lastTransactions > 15) {
         this.temp = "alert";
       } else if (this.lastTransactions > 10) {
@@ -369,7 +359,7 @@ export default {
       possibleFrauds: 1,
       proportionFrauds: 5,
       lastTransactions: 5,
-      tendency: "up",
+      fraudMoney: 0,
       tendencyLast: "up",
       chartOptions: {
         responsive: true,
@@ -416,15 +406,13 @@ export default {
       },
       chartData: {
         labels: [
-          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
         ],
         datasets: [
           {
             label: "Classificação",
             backgroundColor: "#00ae31a8",
-            data: [
-              1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-            ],
+            data: [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           },
         ],
       },

@@ -113,8 +113,8 @@
     </div>
     <p class="mb-4">
       Percebemos que há uma correlação negativa da classe com as colunas v1, v3,
-      v5, v6, v7, v10, v12, v14, v16, v17 e v18 e uma correlação positiva com os
-      atributos v2, v4 e v11. Agora vamos visualizar como são os valores dos
+      v5, v6, v7, v9, v10, v12, v14, v16, v17 v18, v24 e uma correlação positiva com os
+      atributos v2, v4, v8, v11, v19, v20, v21, v27, v28 e amount. Agora vamos visualizar como são os valores dos
       atributos de transações fraudulentas e não fraudulentas:
     </p>
     <div class="mb-4">
