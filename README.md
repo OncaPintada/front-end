@@ -20,3 +20,4 @@ yarn build
 yarn lint
 ```
 
+Observação: Para a ideia de negócio funcionar é preciso estar rodando a [API](https://github.com/OncaPintada/api)

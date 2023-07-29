@@ -36,15 +36,15 @@ export default {
     let backCol = "#BBB";
     let borderColor;
     for (let x = 0; x < 4; x++) {
-      if (json[x]["line"] == 1) {
+      if (json[x]["line"] == 0) {
         label = "Fraude bem classificada";
         backCol = "#ff3737d4";
         borderColor = "#ff3737d4";
-      } else if (json[x]["line"] == 2){
+      } else if (json[x]["line"] == 1){
         label = "Fraude mal classificada";
         backCol = "#00ae31a8";
         borderColor = "#00ae31a8";
-      } else if  (json[x]["line"] == 3) {
+      } else if  (json[x]["line"] == 2) {
         label = "Não fraude bem classificada";
         backCol = "#aa2afab4";
         borderColor = "#aa2afab4";

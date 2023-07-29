@@ -1,7 +1,12 @@
 <template>
   <div class="viewCus">
     <div class="wigPar">
-      <h1 class="title titleIdeia">Monitoramento de transações</h1>
+      <h1 class="title titleIdeia">Monitoramento de transações
+        <div class="logoNegocio">
+          <div class="imagemLogoNegocio"><img src="@\assets\logoIdeia.png" alt=""></div>
+          <span class="titleNegocio">FRAUDE PINTADA</span>
+        </div>
+      </h1>
       <div class="realTimeGraph">
         <div class="graphRealPar">
           <Line
@@ -31,7 +36,7 @@
       </div>
       <div class="graphInformationSmall lastFrauds">
         <div class="subInfo">
-          <p class="textInf">Possível dinheiro fraudado</p>
+          <p class="textInf">Possível<span class="green">&nbsp;$&nbsp;</span>fraudado</p>
           <p class="textInf red">
             R${{ Math.round(this.fraudMoney * 100) / 100 }}
           </p>
@@ -68,6 +73,7 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
 .viewCus {
   padding: 0;
   margin: 50px 0px;
@@ -97,6 +103,7 @@
   border-radius: 20px;
   background: #f0f0f0;
 }
+
 .wigPar p {
   margin: 10px 0px;
 }
@@ -106,10 +113,40 @@
   font-size: 45px;
   font-style: normal;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.logoNegocio {
+  width: 30%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+.imagemLogoNegocio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2.5%;
+  margin-right: 4%;
+  border-radius: 10px;
+  background-color: #0dab09;
+}
+.imagemLogoNegocio img {
+  height: 100%;
+}
+.titleNegocio {
+  background: linear-gradient(to right, #075506 0%, #0a8008 20%, #0dab09 70%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .titleIdeia {
   margin: 0;
-  padding: 2.41%;
+  padding: 0 2.41%;
   grid-area: title;
   display: flex;
   align-items: center;
@@ -218,6 +255,9 @@
   .title {
     font-size: 35px;
   }
+  .logoNegocio {
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 980px) {
   .viewCus {
@@ -247,6 +287,9 @@
   }
   .title {
     font-size: 28px;
+  }
+  .logoNegocio {
+    font-size: 15px;
   }
 }
 </style>
@@ -359,7 +402,7 @@ export default {
       possibleFrauds: 1,
       proportionFrauds: 5,
       lastTransactions: 5,
-      fraudMoney: 0,
+      fraudMoney: 1.98,
       tendencyLast: "up",
       chartOptions: {
         responsive: true,
